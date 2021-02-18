@@ -11,11 +11,13 @@
    Periodically use `git pull instructor` to make sure you get any corrections I make to the assignment. 
 4. Each time you make progress, use
    ```
-   git commit -am "Made Progress" && git push
+   git commit -am "Made Progress" 
+   git push
    ```
 5. When you are done, use
    ```
-   git commit -am "Finished" && git push
+   git commit -am "Finished" 
+   git push
    ```  
    Then go to **canvas** and post the URL of your clone. 
 
