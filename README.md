@@ -4,6 +4,7 @@
 2.  Carefully read the error message (!)
 3.  You _must_ explain the process you have already used to solve the problem.  
     **NOT** how long you worked, or how many attempts. You need to explain your approaches that have thus-far failed. 
+4.  Include the output of any error messages.
 
 # How to Submit and Use Gitlab
 1. Clone this repo into your own subgroup
