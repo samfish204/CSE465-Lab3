@@ -3,7 +3,8 @@
 ;;  that accepts a list (a0, a1, ..., a_n) of n+1 coefficients, 
 ;;  and returns result of evaluating the order-n polynomial 
 ;;      p(x) = a0 + a1 x + a2 x^2 + ... + a_n x^n.
-;;  If the list of coefficients is empty, then p(x) should return zero.
+;;  If the list of coefficients is empty, 
+;;  then p(x) should return zero.
 ;;
 ;;;;;;;;;
 
@@ -11,8 +12,16 @@
 
 
 (define (eval-polynomial coefficients x)
-     (if (null? coefficients) 0  (+ (car coefficients) (* x (eval-polynomial (cdr coefficients) x))))
-     )
+	; q (x) = a1 + a2 x^2 ....
+	; x* q(x) = a1 x + a2 x^3 ....
+	; a0 + x*q(x) = a0 + a1 x + a2 x^2 ....
+	; = p(x)
+	(if (null? coefficients) 
+		0
+		(+ (car coefficients)
+		   (* x (eval-polynomial (cdr coefficients) x)))
+	)
+)
 
 ;;;;;;;;;;;;;
 ;; Tests
