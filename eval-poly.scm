@@ -12,15 +12,7 @@
 
 
 (define (eval-polynomial coefficients x)
-	; q (x) = a1 + a2 x^2 ....
-	; x* q(x) = a1 x + a2 x^3 ....
-	; a0 + x*q(x) = a0 + a1 x + a2 x^2 ....
-	; = p(x)
-	(if (null? coefficients) 
-		0
-		(+ (car coefficients)
-		   (* x (eval-polynomial (cdr coefficients) x)))
-	)
+	0
 )
 
 ;;;;;;;;;;;;;
