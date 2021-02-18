@@ -56,6 +56,7 @@ It is better to turn it in late than incomplete.
 This seems like many problems, but each one is small. 
 If done correctly, each problem should have a short solution
 (a few lines, often just one line of scheme). 
+Of course, they _wont be **easy** _ even if the correct solutions are short. 
 
 1. The grader will run 'make check' to confirm that all checks are successful. 
 2. The grader will look at `reverse-fold.scm` to make sure that the `reverse` is not used. 
