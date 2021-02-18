@@ -1,5 +1,26 @@
 # Lab 3:  More Exercises in Scheme
 
+# How to Submit and Use Gitlab
+1. Clone this repo into your own subgroup
+2. Check out _your_ clone into your container
+3. Add the 'instructor' remote to your repo
+   ```
+   git remote add instructor https://gitlab.csi.miamioh.edu/cse465/instructor/lab03.git
+   git pull instructor
+   ``` 
+   Periodically use `git pull instructor` to make sure you get any corrections I make to the assignment. 
+4. Each time you make progress, use
+   ```
+   git commit -am "Made Progress" && git push
+   ```
+5. When you are done, use
+   ```
+   git commit -am "Finished" && git push
+   ```  
+   Then go to **canvas** and post the URL of your clone. 
+
+# Description
+
 For this assignment, I have put some exercises about 
 higher-order functions in scheme into different files. 
 
