@@ -9,7 +9,7 @@
 # How to Submit and Use Gitlab
 2. Check out _your_ clone into your container. Do _not_ request access to write to the instructor version. 
 3. Do _not_ edit the makefile or .expected files.   
-   Periodically use `make update-http`  or `make update=ssh` to make sure you get any corrections I make to the assignment. 
+   Periodically use `make update-http`  or `make update-ssh` to make sure you get any corrections I make to the assignment. 
 
 
 4. Each time you make progress, or plan to switch to a machine, use
