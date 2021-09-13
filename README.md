@@ -1,31 +1,41 @@
 # Lab 3:  More Exercises in Scheme
 # Before Asking for Help
-1.  Make sure you watched the weak's lecture
-2.  Carefully read the error message (!)
+1.  Make sure you are caught up with the reading and, if you have missed a lecture, try to check with a classmate.
+2.  Carefully read the error message, if any is shown (!)
 3.  You _must_ explain the process you have already used to solve the problem.  
     **NOT** how long you worked, or how many attempts. You need to explain your approaches that have thus-far failed. 
 4.  Include the output of any error messages.
 
 # How to Submit and Use Gitlab
-1. Clone this repo into your own subgroup
-2. Check out _your_ clone into your container
-3. Add the 'instructor' remote to your repo
-   ```
-   git remote add instructor https://gitlab.csi.miamioh.edu/cse465/instructor/lab03.git
-   git pull instructor
-   ``` 
-   Periodically use `git pull instructor` to make sure you get any corrections I make to the assignment. 
-4. Each time you make progress, use
+2. Check out _your_ clone into your container. Do _not_ request access to write to the instructor version. 
+3. Do _not_ edit the makefile or .expected files.   
+   Periodically use `make update-http`  or `make update=ssh` to make sure you get any corrections I make to the assignment. 
+
+
+4. Each time you make progress, or plan to switch to a machine, use
    ```
    git commit -am "Made Progress" 
    git push
    ```
+   If you plan to start work on a new machine, use 
+   ```
+   git pull
+   ``` 
+   ***before*** editing any files. 
 5. When you are done, use
    ```
-   git commit -am "Finished" 
-   git push
+   make submit
+   ```
+   or 
+   ```
+   make check &&  git commit -am "Finished"  &&  git push
    ```  
-   Then go to **canvas** and post the URL of your clone. 
+   > NOTE: The message is irrelevant, I will grade whatever is posted to gitlab periodically after the due date.  
+   **Submit late work ASAP -- you lose points each day that the repo does _not_ pass the tests**. 
+
+   Your work will not be accepted if  `make check` fails. 
+
+6. No need to do anything on canvas -- I grade whatever is in gitlab. 
 
 # Description
 
@@ -52,6 +62,8 @@ To run all of the tests use `make check` or just `make`.
 You will receive a zero if you submit and the checks do not all pass.
 It is better to turn it in late than incomplete. 
 
+To submit, type  `make submit` or just commit and push your changes to the repo. 
+
 # Grading Notes
 This seems like many problems, but each one is small. 
 If done correctly, each problem should have a short solution
@@ -59,7 +71,7 @@ If done correctly, each problem should have a short solution
 Of course, they _wont be **easy** _ even if the correct solutions are short. 
 
 1. The grader will run 'make check' to confirm that all checks are successful. 
-2. The grader will look at `reverse-fold.scm` to make sure that the `reverse` is not used. 
+2. The grader will look at `reverse-fold.scm` to make sure that the `reverse` builtin function is not used. 
 3. The grader will look at `cube-all.scm` to make sure that `map` is used properly.
 4. The grader will look at `even-values.scm` to make sure that `filter` is used properly. 
 
