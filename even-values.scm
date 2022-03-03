@@ -5,7 +5,7 @@
 
 (define (even-values lst)
   ; This is one short line
-  '()
+  (filter even? lst)
 )
 
 ;; Test cases

@@ -9,7 +9,14 @@
 
 
 (define (polynomial coefs)
-  
+    (if (null? coefs)
+	(lambda (x) 0)
+        (lambda (x)
+            (+ (car coefs)
+                (* x ((polynomial (cdr coefs)) x))
+                )
+            )
+    )  
 )
 
 ;;;;;;;;;;;;;

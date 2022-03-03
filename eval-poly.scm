@@ -12,7 +12,12 @@
 
 
 (define (eval-polynomial coefficients x)
+    (if (null? coefficients)
 	0
+	( + (car coefficients)
+	    (* x (eval-polynomial (cdr coefficients) x))
+        )
+    )
 )
 
 ;;;;;;;;;;;;;
